@@ -14,7 +14,7 @@ group by c.CustomerID, c.LastName, c.FirstName, year(s.date), month(s.date);
 
 
 CREATE VIEW IF NOT EXISTS top_ten_customers_amount_view as
-select top 10 c.CustomerID as cust_id, c.LastName as cust_last_name, c.FirstName as cust_first_name, sum(p.price * p..quantity) tot_amnt_purchased
+select top 10 c.CustomerID as cust_id, c.LastName as cust_last_name, c.FirstName as cust_first_name, sum(p.price * p.quantity) tot_amnt_purchased
 from raw.sales s, raw.customers c,  raw.products p
 where s.CustomerID = c.CustomerID
 and s.ProductID = p.ProductID
