@@ -6,9 +6,6 @@ ii. Employees - https://seng5709.s3.us-west-2.amazonaws.com/employees/
 iii. Products - https://seng5709.s3.us-west-2.amazonaws.com/products/   
 iv. Sales - https://seng5709.s3.us-west-2.amazonaws.com/sales/
 
-# Connection 
-File: Config
-
 ## Download Data Files using AWS CLI [Optional]
 1. aws s3 cp s3://seng5709/customers/ . --recursive --no-sign-request
 2. aws s3 cp s3://seng5709/employees/ . --recursive --no-sign-request
@@ -19,9 +16,9 @@ File: Config
 * Employees data is separated by a comma but rest of the files are pipe delimited
 
 ## SQL Run Order
-1. create_DB_schemas.sql
-2. create_stages.sql
-3. create_raw_tables.sql
-4. load_raw_data.sql
-5. drop_all.sql
+1. ./SnowSQL/create_DB_schemas.sql
+2. ./SnowSQL/create_stages.sql
+3. ./SnowSQL/create_raw_tables.sql
+4. ./SnowSQL/load_raw_data.sql
+5. ./SnowSQL/drop_all.sql
 
